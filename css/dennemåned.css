@@ -1,0 +1,455 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body 
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+
+}
+
+.flex 
+{
+  z-index: -1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+
+  display: flex;
+  z-index: 10;
+  width: 1000px;
+  height: 800px;
+  margin-right: 200px;
+  margin-left: 260px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.container .card 
+{
+  max-width: 850px;
+  height: 170px;
+  width: 2500px;
+  background:  #eceff1;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
+  display: flex;
+
+}
+
+.container .card .imgbx 
+{
+  max-width: 180px;
+  flex: 0 0 150px;
+
+}
+
+.container .card .imgbx img
+{
+  max-width: 100%;
+}
+
+.container .card .content 
+{
+  margin-left: 20px;
+  
+}
+
+.imgbx img 
+{
+  height: 170px;
+}
+
+.content 
+{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.mobil-text 
+{
+  display: none;
+}
+
+p 
+{
+  color: black;
+}
+
+h2 
+{
+  color: black;
+}
+
+
+/*-------- nav bar-----*/
+nav
+{
+height: 90px;
+background: white;
+}
+
+nav img {
+  width: 155px;
+  position: absolute;
+  top: 10px;
+  left: 5%;
+}
+
+nav ul
+{
+  float: right;
+  margin-right: 11%;
+}
+
+nav ul li 
+{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 50px; 
+}
+
+nav ul li a
+{
+  position: relative;
+  color:black;
+  font-size:16px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+nav ul li a:before
+{
+  position: absolute;
+  content: ''; /* deterimer hvad animationen viser*/
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear; /* menubar list - animation */
+}
+
+nav ul li a:hover:before 
+{
+  transform: scaleX(1); /* Animation(menubar) længde*/
+  transform-origin: left; 
+}
+
+label #btn,
+label #cancel 
+{
+  color: black;
+  font-size: 30px;
+  float:right ;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check 
+{
+  display: none;
+}
+
+/* -------- Baggrund -----*/
+
+.baggrund-img 
+{
+ z-index: 1;
+ position: absolute;
+ z-index: -1;
+ width: 100%;
+ opacity: 50%;
+}
+
+.style 
+{
+  width: 100%;
+  height: 1000px;
+
+}
+
+
+
+/*--------- media screen-----*/ 
+
+@media only screen and (max-width: 1118px)
+{
+  nav img 
+  {
+    left: 8%;
+  }
+  nav ul 
+  {
+    margin-right: 9%;
+
+  }
+
+  nav ul li 
+  {
+    margin: 0 25px;
+
+  }
+
+  .container {
+
+    background:none;
+    width: 2000px;
+    height: 400px;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+   
+  }
+  
+  .container .card 
+  {
+    width: 250px;
+    height: 290px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background:white;
+    margin-bottom: 2px;
+    justify-content: center;
+  
+  }
+  
+  
+  .container .card .imgbx img
+  {
+    max-width: 100%;
+    vertical-align: middle;
+   
+  }
+  
+  h2
+  {
+   
+    font-size: small;
+  }
+  
+  .imgbx img 
+  {
+    border: 1px black rgb(158, 140, 140);
+    width: 250px;
+    height: 290px;
+  
+  }
+  
+  h1 
+  {
+    top: 25px;
+   
+    font-size: medium;
+  }
+  
+  
+  .baggrund-img 
+  {
+   height: 500px;
+  }
+  
+  .style 
+  {
+    width: 100%;
+    height: 500px;
+  
+  }
+  
+
+}
+
+
+@media only screen and (max-width: 944px)
+{
+  nav img 
+  {
+    left: 6%;
+    top: 12px;
+    width:130px;
+  }
+
+  nav ul li 
+  {
+    margin: 0 10px;
+
+  }
+
+  nav ul li a
+  {
+    font-size: 17px;
+  }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 860px)
+{
+  label #btn 
+  {
+    display: block;
+  }
+
+  ul 
+  {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:rgb(175, 161, 151) ;
+    top: 80px; 
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li
+  {
+    display: block;
+    margin: 34px 0;
+    line-height: 52px;
+
+  }
+
+  nav ul li a
+  {
+    font-size: 20px;
+  }
+
+  #check:checked~ul
+  {
+    left:0;
+  }
+
+  #check:checked ~ label #btn 
+  {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel 
+  {
+    display: block;
+
+  }
+
+   /*------- flexbox------*/
+  .container {
+    z-index: 0;
+    z-index: 10;
+    width: 100%;
+    height: 450px;
+    margin-left: 20px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 20px;
+    padding-left: 40px;
+    flex-wrap: wrap;
+    position: absolute;
+  }
+  
+  .container .card 
+  {
+    max-width: 1000px;
+    height: 100px;
+    width: 300px;
+    background:#ffffff;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding: 0px;
+    display: flex;
+    
+  
+  }
+
+  .container .card .imgbx 
+{
+  max-width: 90px;
+  
+
+}
+
+.container .card .imgbx img
+{
+  max-width: 100%;
+}
+
+.container .card .content 
+{
+  margin-left: 5px;
+  font-size: xx-small;
+  
+}
+
+.imgbx img
+{
+  height: 100px;
+
+}
+
+p 
+{
+  display: none;
+}
+
+.mobil-text 
+{
+  display: block
+}
+
+
+
+/*..... baggrund----*/
+.style 
+{
+  width: 100%;
+  height: 650px;
+
+}
+
+}
+
+
+
+@media only screen and (max-width: 700px)
+{
+  .btn
+  {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+
+  }
+
+  .container.card
+  {
+    flex-direction: column;
+    max-width:150px ;
+  }
+}
+

@@ -1,0 +1,532 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body 
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+ 
+
+}
+
+.banner 
+{
+  width: 100%;
+  height: 150px;
+}
+
+
+/* -------- Baggrund -----*/
+
+.baggrund-img 
+{
+ z-index: 1;
+ position: absolute;
+ z-index: -1;
+ width: 100%;
+ opacity: 90%;
+ height: 800px;
+}
+
+.style 
+{
+  width: 100%;
+  height: 1800px;
+
+}
+
+
+
+/*-------- nav bar-----*/
+nav
+{
+height: 90px;
+background: white;
+}
+
+nav img {
+  width: 155px;
+  position: absolute;
+  top: 10px;
+  left: 5%;
+}
+
+nav ul
+{
+  float: right;
+  margin-right: 11%;
+}
+
+nav ul li 
+{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 50px; 
+}
+
+nav ul li a
+{
+  position: relative;
+  color:black;
+  font-size:16px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+nav ul li a:before
+{
+  position: absolute;
+  content: ''; /* deterimer hvad animationen viser*/
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear; /* menubar list - animation */
+}
+
+nav ul li a:hover:before 
+{
+  transform: scaleX(1); /* Animation(menubar) længde*/
+  transform-origin: left; 
+}
+
+label #btn,
+label #cancel 
+{
+  color: black;
+  font-size: 30px;
+  float:right ;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check 
+{
+  display: none;
+}
+
+
+
+
+/*------- Artikel -----*/ 
+
+.box 
+{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    height: 1500px;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+h1 
+{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+article 
+{
+    margin-top: 50px;
+    margin-left: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.link-id
+{
+    color: #0098c7;
+}
+
+.U::first-letter 
+{
+  color:  #b28a6c;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nude 
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+/*------- footer--------*/
+
+
+
+
+.footer-page {
+  position: absolute;
+  margin-top: 200px;
+  width: 100%;
+  text-align: center;
+ 
+  
+ 
+  
+  
+}
+
+.footer-icons 
+{
+  display: inline-block;
+  padding: 30px;
+  padding-top: 13px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 10px;
+
+
+  
+}
+
+.icon-text-style
+{
+  color: black;
+  font-size: x-small;
+}
+
+.icon-img
+{
+  height: 45px;
+  width: 32px;
+}
+
+.icon-facebook
+{
+  height: 40px;
+  width: 40px;
+}
+
+.icon-nyhedsbrev 
+{
+  height: 35px;
+  width: 50px;
+}
+
+.icon-kontakt
+{
+  height: 40px;
+  width: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------- media screen-----*/ 
+
+@media only screen and (max-width: 1118px)
+{
+  nav img 
+  {
+    left: 8%;
+  }
+  nav ul 
+  {
+    margin-right: 9%;
+
+  }
+
+  nav ul li 
+  {
+    margin: 0 25px;
+
+  }
+
+   .footer-page {
+    bottom: -2700px;
+    max-width: 600px ;
+    text-align: center;
+    height: fit-content;
+  }
+  
+  .footer-icons 
+  {
+    display: inline-block;
+    margin: 0;
+    
+ }
+ 
+ .column-1 
+ {
+  margin: 10px;
+  width: 33.33%;
+  padding: 5px;
+  margin-bottom: 0;
+  
+  }
+  .column-2
+  {
+    margin: 10px;
+    margin-bottom: 3px;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  .icon-text-style
+{
+  font-size: x-small;
+}
+
+.icon-img
+{
+  height: 35px;
+  width: 30px;
+}
+
+.icon-nyhedsbrev 
+{
+  height: 30px;
+  width: 40px;
+}
+
+.icon-kontakt
+{
+  height: 35px;
+  width: 40px;
+}
+
+}
+
+@media only screen and (max-width: 960px)
+{
+  .banner 
+{
+  width: 100%;
+  height: 60px;
+} 
+  .footer-page {
+    bottom: -3050px;
+    max-width: 600px ;
+    text-align: center;
+    height: fit-content;
+  }
+  
+  .footer-icons 
+  {
+    display: inline-block;
+    margin: 0;
+    
+ }
+ 
+ .column-1 
+ {
+  margin: 10px;
+  width: 33.33%;
+  padding: 5px;
+  margin-bottom: 0;
+  
+  }
+  .column-2
+  {
+    margin: 10px;
+    margin-bottom: 3px;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  .icon-text-style
+{
+  color: rgb(0, 0, 0);
+  font-size: x-small;
+}
+
+.icon-img
+{
+  height: 35px;
+  width: 30px;
+}
+
+.icon-nyhedsbrev 
+{
+  height: 30px;
+  width: 40px;
+}
+
+.icon-kontakt
+{
+  height: 35px;
+  width: 40px;
+}
+
+
+
+.baggrund-img 
+{
+ display: none;
+}
+
+body 
+{
+  background:white;
+}
+
+/*------ artikel -----*/
+.box
+{
+  margin-top: 20px;
+  width: 90%;
+  height: 3350px;
+  background-color: white
+}
+
+h1 
+{
+  font-size: medium;
+}
+
+article 
+{
+  margin-top: 10px;
+}
+
+}
+  
+
+
+
+@media only screen and (max-width: 944px)
+{
+  nav img 
+  {
+    left: 6%;
+    top: 12px;
+    width:130px;
+  }
+
+  nav ul li 
+  {
+    margin: 0 10px;
+
+  }
+
+  nav ul li a
+  {
+    font-size: 17px;
+  }
+
+}
+
+
+@media only screen and (max-width: 860px)
+{
+  label #btn 
+  {
+    display: block;
+  }
+
+  ul 
+  {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:rgb(175, 161, 151);
+    top: 80px; 
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li
+  {
+    display: block;
+    margin: 34px 0;
+    line-height: 52px;
+
+  }
+
+  nav ul li a
+  {
+    font-size: 20px;
+  }
+
+  #check:checked~ul
+  {
+    left:0;
+  }
+
+  #check:checked ~ label #btn 
+  {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel 
+  {
+    display: block;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 700px)
+{
+  .btn
+  {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+
+  }
+}
+
+
+@media only screen and (max-width: 360px)
+{
+  .footer-page {
+    bottom: -3300px;
+    margin: 0;
+    max-width: 600px ;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .box 
+  {
+    background-color: white;
+    height: 3550px;
+  }
+
+}
+
+@media only screen and (max-width: 320px)
+{
+  .footer-page {
+    bottom: -3850px;
+    margin: 0;
+    max-width: 600px ;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .box 
+  {
+    background-color: white;
+    height: 4050px;
+  }
+
+}
